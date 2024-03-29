@@ -1,7 +1,36 @@
-<script setup lang="ts">
-import NxWelcome from './NxWelcome.vue';
-</script>
-
 <template>
-  <NxWelcome title="student-slider-demo" />
+  <Radar :data="data" :options="options" />
 </template>
+
+<script lang="ts">
+import {
+  Chart as ChartJS,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend
+} from 'chart.js'
+import { Radar } from 'vue-chartjs'
+import * as chartConfig from './chartConfig.js'
+
+ChartJS.register(
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend
+)
+
+export default {
+  name: 'App',
+  components: {
+    Radar
+  },
+  data() {
+    return chartConfig
+  }
+}
+</script>

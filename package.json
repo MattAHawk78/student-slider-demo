@@ -9,7 +9,9 @@
   },
   "private": true,
   "dependencies": {
-    "vue": "^3.3.4"
+    "chart.js": "^4.4.2",
+    "vue": "^3.3.4",
+    "vue-chartjs": "^5.3.0"
   },
   "devDependencies": {
     "@nx/cypress": "18.2.1",
